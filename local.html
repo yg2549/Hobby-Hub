@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HobbyHub — In-Person Clubs</title>
+  <meta name="description" content="In-person clubs." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="HobbyHub home">
+        <span class="brand-mark" aria-hidden="true">◎</span>
+        <span class="brand-text">HobbyHub</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="remote.html">Long-Distance</a>
+        <a href="local.html">In-Person</a>
+        <a href="#join">Join</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav">
+        Menu
+      </button>
+    </div>
+
+    <nav id="mobileNav" class="mobile-nav" aria-label="Mobile" hidden>
+        <a href="index.html">Home</a>
+        <a href="remote.html">Long-Distance</a>
+        <a href="local.html">In-Person</a>
+        <a href="#join">Join</a>
+    </nav>
+  </header>
+
+  
+
+  <main id="main" class="section">
+    <div class="container">
+      <header class="page-header">
+        <h1>In-Person Clubs</h1>
+        <p>
+          Local groups focus on consistent meetups with clear logistics. Event cards include time, location,
+          and what to bring, making it easy for participants to show up and participate.
+        </p>
+      </header>
+
+      <section class="section" aria-labelledby="localClubsIntro">
+        <h2 id="localClubsIntro">Our current in-person clubs</h2>
+      
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-top">
+              <h3>Run Club</h3>
+            </div>
+            <p>
+                Group weekly long runs and shorter meetups for anyone training or just building consistency. Pace-friendly, supportive and long runs are based on a 6-month marathon training plan.
+            </p>
+          </article>
+      
+          <article class="card">
+            <div class="card-top">
+              <h3>Hike Club</h3>
+            </div>
+            <p>
+              Weekend hikes with a pre-determined difficulty level and meeting point. Carpool is also planned in advance for further hikes.
+            </p>
+          </article>
+      
+          <article class="card">
+            <div class="card-top">
+              <h3>Game Night Club</h3>
+            </div>
+            <p>
+              Midweek game nights with snacks and drinks. Games varry from classic board games, card games, creative games like DnD, or anything anyone suggest.
+            </p>
+          </article>
+        </div>
+      </section>
+      
+
+      
+      
+
+      <section class="section" aria-labelledby="eventFilters">
+        <h2 id="eventFilters">Weekly meetups/events:</h2>
+        <p class="caption">Use the filter buttons to select types of in-person events shown.</p>
+
+        <div class="filters" role="group" aria-label="Event filters">
+          <button class="filter-btn" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="outdoor">Outdoors</button>
+          <button class="filter-btn" type="button" data-filter="social">Social</button>
+        </div>
+
+        <section id="events" class="event-grid" aria-label="Event list">
+          <article class="event" data-type="outdoor">
+            <h3>Marathon Training Weekly Long Run</h3>
+            <p><strong>When:</strong> Sunday, 9:00 AM</p>
+            <p><strong>Where:</strong> Park entrance</p>
+            <p><strong>Bring:</strong> Water and fuel</p>
+          </article>
+
+          <article class="event" data-type="outdoor">
+            <h3>Group Hike Meetup</h3>
+            <p><strong>When:</strong> Satruday, 11:00 AM</p>
+            <p><strong>Where:</strong> Trail Parking Lot, weather permitting</p>
+            <p><strong>Bring:</strong> Sunscreen and snacks</p>
+          </article>
+
+          <article class="event" data-type="social">
+            <h3>Game Night</h3>
+            <p><strong>When:</strong> Wednesday, 6:30 PM</p>
+            <p><strong>Where:</strong> Host's house</p>
+            <p><strong>Bring:</strong> Snacks and/or drinks</p>
+          </article>
+        </section>
+
+      </section>
+
+      <section class="section media-pair" aria-labelledby="inPersonMedia">
+        <h2 id="inPersonMedia">In-person clubs in action</h2>
+      
+        <div class="media-grid">
+          <video controls muted playsinline preload="metadata">
+            <source src="media/gamenight.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+      
+          <figure class="wide-image">
+            <img
+              src="images/runclub-600.jpg"
+              srcset="images/runclub-600.jpg 600w, images/runclub-1200.jpg 1200w"
+              sizes="(max-width: 900px) 100vw, 50vw"
+              width="600"
+              height="380"
+              alt="Beach run club"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+      
+      
+    </div>
+  </main>
+  <section id="join" class="section alt">
+    <div class="container">
+      <h2>Join a club</h2>
+      <p class="caption">Fill out the form to contact us and begin joining a club.</p>
+  
+      <form class="join-form" action="https://formspree.io/f/xovgovvl" method="POST">
+        <div class="form-grid">
+          <div>
+            <label for="name-local">Name</label>
+            <input id="name-local" name="name" type="text" autocomplete="name" required />
+          </div>
+  
+          <div>
+            <label for="email-local">Email</label>
+            <input id="email-local" name="email" type="email" autocomplete="email" required />
+          </div>
+  
+          <div class="full">
+            <label for="clubType-local">Club type</label>
+            <select id="clubType-local" name="clubType" required>
+              <option value="" selected disabled>Select one…</option>
+              <option value="remote">Long-Distance</option>
+              <option value="local">In-Person</option>
+            </select>
+          </div>
+  
+          <fieldset class="full">
+            <legend>Pick one or more clubs</legend>
+            <p class="caption" id="clubHelp-local">Choose a club type above to see options.</p>
+            <div id="clubOptions-local" class="checkbox-grid" aria-describedby="clubHelp-local"></div>
+          </fieldset>
+  
+          <div class="full">
+            <label for="message-local">Anything else?</label>
+            <textarea
+              id="message-local"
+              name="message"
+              rows="4"
+              placeholder="If you have any questions, comments or requests"
+            ></textarea>
+          </div>
+        </div>
+  
+        <input type="hidden" name="_subject" value="New HobbyHub signup" />
+        <button class="button" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+  
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> HobbyHub</p>
+      <p><a href="index.html">Home</a> · <a href="remote.html">Long-Distance</a></p>
+      <p class="caption">
+        Photo credit:
+        <a
+          href="https://glorioussport.com/articles/rise-of-run-clubs-cult-or-community/"
+          target="_blank"
+          rel="noopener"
+        >
+          glorioussport
+        </a>
+      </p>
+      <p class="caption">
+        Video credit:
+        <a
+          href="Video by RDNE Stock project from Pexels: https://www.pexels.com/video/a-group-of-friends-having-coffee-while-playing-a-game-5529395/"
+          target="_blank"
+          rel="noopener"
+        >
+          Pexels
+        </a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

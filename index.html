@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HobbyHub</title>
+  <meta name="description" content="A platform for hobby-based clubs from whereever you are" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="HobbyHub home">
+        <span class="brand-mark" aria-hidden="true">◎</span>
+        <span class="brand-text">HobbyHub</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="remote.html">Long-Distance</a>
+        <a href="local.html">In-Person</a>
+        <a href="#join">Join</a>
+      </nav>
+      
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav">
+        Menu
+      </button>
+    </div>
+
+    <nav id="mobileNav" class="mobile-nav" aria-label="Mobile" hidden>
+        <a href="index.html">Home</a>
+        <a href="remote.html">Long-Distance</a>
+        <a href="local.html">In-Person</a>
+        <a href="#join">Join</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Community, organized around hobbies.</h1>
+          <p>
+            HobbyHub is a hobby-based platform that is designed to help people maintain meaningful
+            connections through shared interests, both locally and across long distances.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#join">Join a club</a>
+          </div>
+          
+
+          <div class="controls">
+            <label class="switch">
+                <input id="themeToggle" type="checkbox" />
+                <span>Cozy mode</span>
+                <span class="switch-ui" aria-hidden="true"></span>
+            </label>
+              
+
+            <p id="statusText" class="status" role="status" aria-live="polite">
+              Pick your vibe today!
+            </p>
+          </div>
+        </div>
+
+        <figure class="hero-media">
+        <img
+            src="images/hero-450.jpg"
+            srcset="images/hero-450.jpg 450w, images/hero-900.jpg 900w"
+            sizes="(max-width: 900px) 100vw, 50vw"
+            width="450"
+            height="300"
+            alt="Two friends on together on a call."
+            loading="lazy"
+          />
+          <figcaption class="caption">
+            It doesnt matter where you are in the world, you can always find a way to connect with your loved ones.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <h2>How it works</h2>
+        <p>
+          The platform focuses on small groups that are driven by a joint interest and that also prioritize activity. 
+          HobyHub supports two primary modes of engagement, long-distance hobby groups and in-person activities, so that no matter where you are and where your loved ones are, you can always find a way to connect with them over your shared interets.
+          You simply have to decide which mode you are interested in participating in and pick the hobbies that you are excited to find community with!
+        </p>
+
+        <div class="card-grid">
+          <article class="card" data-preview="remote">
+            <div class="card-top">
+              <img src="images/remote.svg" width="40" height="40" alt="" aria-hidden="true" />
+              <h3>Long-Distance Clubs</h3>
+            </div>
+            <p>Individual participation in the clubs hobby coupled with remote sessions that follow prompts, check-ins and sometimes virtual communal participation in the hobbies.</p>
+          </article>
+
+          <article class="card" data-preview="local">
+            <div class="card-top">
+              <img src="images/inperson.svg" width="40" height="40" alt="" aria-hidden="true" />
+              <h3>In-Person Clubs</h3>
+            </div>
+            <p>Consistent meetups as well as indiviual participation and sharing when meating up.</p>
+          </article>
+        </div>
+
+        <div class="preview" aria-label="Club preview panel">
+            <h3>Preview</h3>
+            <p id="previewText">
+              Click the club format you are interested in above to preview the current club availablities.
+            </p>
+          
+            <a id="previewLink" href="#" hidden>
+              See more →
+            </a>
+        </div>
+          
+          
+      </div>
+    </section>
+
+   
+  </main>
+
+  <section id="join" class="section alt">
+    <div class="container">
+      <h2>Join a club</h2>
+      <p class="caption">
+        Fill out the form to contact us and begin joining a club. 
+      </p>
+  
+      <form
+        class="join-form"
+        action="https://formspree.io/f/xovgovvl"
+        method="POST"
+      >
+        <div class="form-grid">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+  
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+  
+          <div class="full">
+            <label for="clubType">Club type</label>
+            <select id="clubType" name="clubType" required>
+              <option value="" selected disabled>Select one…</option>
+              <option value="remote">Long-Distance</option>
+              <option value="local">In-Person</option>
+            </select>
+          </div>
+  
+          <fieldset class="full">
+            <legend>Pick one or more clubs</legend>
+            <p class="caption" id="clubHelp">Choose a club type above to see options</p>
+  
+            <div id="clubOptions" class="checkbox-grid" aria-describedby="clubHelp">
+            </div>
+          </fieldset>
+  
+          <div class="full">
+            <label for="message">Anything else?</label>
+            <textarea id="message" name="message" rows="4" placeholder="If you have any questions, comments or requests"></textarea>
+          </div>
+        </div>
+  
+        <input type="hidden" name="_subject" value="New HobbyHub signup" />
+        <button class="button" type="submit">Send</button>
+  
+      </form>
+    </div>
+  </section>
+  
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> HobbyHub</p>
+      <p><a href="#main">Back to top</a></p>
+  
+      <p class="caption">
+        Photo credit:
+        <a
+          href="https://www.captel.com/2021/02/virtual-hobbies-try-with-friends-online-activities/"
+          target="_blank"
+          rel="noopener"
+        >
+          CapTel
+        </a>
+      </p>
+  
+      <p class="caption">
+        Icon credits:
+        <a
+          href="https://www.svgrepo.com/svg/2232/working-with-laptop"
+          target="_blank"
+          rel="noopener"
+        >
+          SVG Repo
+        </a>,
+        <a
+          href="https://www.svgrepo.com/svg/131773/friends-talking"
+          target="_blank"
+          rel="noopener"
+        >
+          SVG Repo
+        </a>
+      </p>
+    </div>
+  </footer>
+  
+</body>
+</html>

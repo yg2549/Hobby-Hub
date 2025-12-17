@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HobbyHub — Long-Distance Clubs</title>
+  <meta name="description" content="Long-distance hobby clubs" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="HobbyHub home">
+        <span class="brand-mark" aria-hidden="true">◎</span>
+        <span class="brand-text">HobbyHub</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="remote.html">Long-Distance</a>
+        <a href="local.html">In-Person</a>
+        <a href="#join">Join</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav">
+        Menu
+      </button>
+    </div>
+
+    <nav id="mobileNav" class="mobile-nav" aria-label="Mobile" hidden>
+        <a href="index.html">Home</a>
+        <a href="remote.html">Long-Distance</a>
+        <a href="local.html">In-Person</a>
+        <a href="#join">Join</a>
+    </nav>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <header class="page-header">
+        <h1>Long-Distance Clubs</h1>
+        <p>
+          Remote clubs are designed for everyone and anyone regardless of where they live as a way to connect even from afar. They combine both individual activities and virtual group activities. The time commitment and pressue is minimal due to time differences and other constraints, but these remote clubs allow a sense of community while being able to manage ones own schedule. 
+        </p>
+      </header>
+
+      <section id="clubs" class="section">
+        <h2>Our current remote clubs:</h2>
+
+        <div class="two-col">
+            <figure class="side-image">
+                <img
+                  src="images/zoommovie-600.jpg"
+                  srcset="images/zoommovie-600.jpg 600w, images/zoommovie-1200.jpg 1200w"
+                  sizes="(max-width: 900px) 100vw, 40vw"
+                  width="600"
+                  height="450"
+                  alt="Virtual Movie night disney zoom."
+                  loading="lazy"
+                />
+                <figcaption class="caption">
+                  Virtual movie nights is just one of the ways to connect long-distance.
+                </figcaption>
+            </figure>
+              
+
+          <div class="accordion" aria-label="Remote club details">
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="panelBook">
+              <span class="acc-title">Book Club</span>
+              <span class="acc-meta">Weekly · 45 min</span>
+            </button>
+            <div id="panelBook" class="acc-panel" hidden>
+              <p><strong>Format:</strong> Set reading goals for a single book with group discussions through zoom and messaging.</p>
+              <p><strong>Less commitment option:</strong> Members can send a response if they can’t attend live meetings.</p>
+            </div>
+
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="panelKnit">
+              <span class="acc-title">Arts and Craft Circle</span>
+              <span class="acc-meta">Biweekly · 60 min</span>
+            </button>
+            <div id="panelKnit" class="acc-panel" hidden>
+              <p><strong>Format:</strong> Individual crafting session with a virtual show-and-tell of the project at the end.  </p>
+              <p><strong>More commitment option:</strong> Can join online meetings to craft "together" and give/recieve advice between sessions.</p>
+            </div>
+
+            <button class="acc-btn" type="button" aria-expanded="false" aria-controls="panelWatch">
+              <span class="acc-title">Watch Party Night</span>
+              <span class="acc-meta">Monthly · 90 min</span>
+            </button>
+            <div id="panelWatch" class="acc-panel" hidden>
+              <p><strong>Format:</strong> Watch party services to watch together while on a zoom call and discuss after.</p>
+              <p><strong>More commitment option:</strong> Can also watch a show and watch episodes individually and discuss after or during a watch party.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <section id="join" class="section alt">
+    <div class="container">
+      <h2>Join a club</h2>
+      <p class="caption">Fill out the form to contact us and begin joining a club.</p>
+  
+      <form class="join-form" action="https://formspree.io/f/xovgovvl" method="POST">
+        <div class="form-grid">
+          <div>
+            <label for="name-remote">Name</label>
+            <input id="name-remote" name="name" type="text" autocomplete="name" required />
+          </div>
+  
+          <div>
+            <label for="email-remote">Email</label>
+            <input id="email-remote" name="email" type="email" autocomplete="email" required />
+          </div>
+  
+          <div class="full">
+            <label for="clubType-remote">Club type</label>
+            <select id="clubType-remote" name="clubType" required>
+              <option value="" selected disabled>Select one…</option>
+              <option value="remote">Long-Distance</option>
+              <option value="local">In-Person</option>
+            </select>
+          </div>
+  
+          <fieldset class="full">
+            <legend>Pick one or more clubs</legend>
+            <p class="caption" id="clubHelp-remote">Choose a club type above to see options.</p>
+  
+            <div id="clubOptions-remote" class="checkbox-grid" aria-describedby="clubHelp-remote"></div>
+          </fieldset>
+  
+          <div class="full">
+            <label for="message-remote">Anything else?</label>
+            <textarea id="message-remote" name="message" rows="4" placeholder="If you have any questions, comments or requests"></textarea>
+          </div>
+        </div>
+  
+        <input type="hidden" name="_subject" value="New HobbyHub signup" />
+        <button class="button" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+  
+
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> HobbyHub (concept website).</p>
+      <p><a href="index.html">Home</a> · <a href="local.html">In-Person</a></p>
+      <p class="caption">
+        Photo credit:
+        <a
+          href="https://www.captel.com/2021/02/virtual-hobbies-try-with-friends-online-activities/"
+          target="_blank"
+          rel="noopener"
+        >
+          Reddit
+        </a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
