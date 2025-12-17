@@ -89,6 +89,11 @@
 .site-header .site-nav a {
   font-weight: 600;
 }
+.site-header a:link,
+.site-header a:visited {
+  color: #f4f4f5; 
+}
+
 
 
 
